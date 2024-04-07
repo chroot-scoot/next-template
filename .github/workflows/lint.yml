@@ -18,7 +18,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install -g pnpm && pnpm install --frozen-lockfile
 
       - name: Lint Files
-        run: npx eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0
+        run: pnpm exec eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0
