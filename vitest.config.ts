@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: 'jsdom',
-    include: ['src/**/*.spec.tsx'],
+    include: ['src/**/*.spec.{tsx,ts}'],
     reporters: ['html', 'default'],
     outputFile: 'vitest-report/index.html',
   },

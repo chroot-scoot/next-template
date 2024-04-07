@@ -10,7 +10,7 @@ env:
   NODE_VERSION: lts/iron
 
 jobs:
-  eslint:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
