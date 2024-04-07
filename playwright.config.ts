@@ -6,9 +6,10 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: process.env.CI
-    ? 'dot'
-    : [['line'], ['html', { outputDir: 'playwright-report', open: 'never' }]],
+  reporter: [
+    ['line'],
+    ['html', { outputDir: 'playwright-report', open: 'never' }],
+  ],
   use: {
     baseURL: process.env.BASE_URL,
     trace: 'on-first-retry',

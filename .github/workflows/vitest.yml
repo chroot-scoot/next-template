@@ -1,18 +1,16 @@
-name: Playwright Tests
+name: Unit Test
 
 on:
   push:
-    branches: main
+    branches: [main, dev]
   pull_request:
-    branches: main
+    branches: [main, dev]
 
 env:
-  BASE_URL: http://127.0.0.1:3000
   NODE_VERSION: lts/iron
 
 jobs:
-  test:
-    timeout-minutes: 60
+  eslint:
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
@@ -24,16 +22,14 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
-        run: |
-          npm ci
-          npx playwright install --with-deps
+        run: npm ci
 
-      - name: Run Playwright tests
-        run: npm run test
+      - name: Run Unit tests
+        run: npm run utest
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: playwright-report
-          path: playwright-report/
+          name: vitest-report
+          path: vitest-report/
           retention-days: 30
