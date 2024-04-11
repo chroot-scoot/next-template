@@ -40,6 +40,7 @@
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "@commitlint/types": "^19.0.3",
+    "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.43.0",
     "@testing-library/react": "^14.2.2",
     "@types/node": "^20",
