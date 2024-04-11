@@ -1,5 +1,5 @@
 import pino from 'pino';
-import { serverEnv } from '@/common/env';
+import { serverEnv } from '@/env';
 
 const transport = pino.transport({
   targets: [
