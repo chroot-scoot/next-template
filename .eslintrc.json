@@ -1,11 +1,5 @@
 {
-  "plugins": ["tailwindcss", "drizzle"],
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:prettier/recommended",
-    "plugin:tailwindcss/recommended",
-    "plugin:drizzle/recommended"
-  ],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
   "settings": {
     "tailwindcss": {
       "callees": ["classnames", "clsx", "ctl", "cva", "tv", "cn"]
