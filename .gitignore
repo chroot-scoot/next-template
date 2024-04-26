@@ -4,13 +4,6 @@
 .pnp.js
 .yarn/install-state.gz
 
-# testing
-/coverage
-/test-results/
-/vitest-report/
-/playwright-report/
-/playwright/.cache/
-
 # next.js
 /.next/
 /out/

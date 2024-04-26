@@ -11,15 +11,5 @@
       "callees": ["classnames", "clsx", "ctl", "cva", "tv", "cn"]
     }
   },
-  "overrides": [
-    {
-      "files": ["./tests/**/*.spec.ts"],
-      "extends": ["plugin:playwright/recommended"]
-    },
-    {
-      "files": ["./src/**/*.spec.{tsx,ts}"],
-      "plugins": ["testing-library", "vitest"],
-      "extends": ["plugin:testing-library/react", "plugin:vitest/all"]
-    }
-  ]
+  "overrides": []
 }
