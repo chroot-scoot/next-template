@@ -1,7 +1,7 @@
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
-export const serverEnv = createEnv({
+export const env = createEnv({
   server: {
     DATABASE_CONN_STR: z.string(),
     LOGSTREAM_SOURCE_TOKEN: z.string(),

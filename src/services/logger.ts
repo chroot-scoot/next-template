@@ -1,5 +1,5 @@
 import pino from 'pino';
-import { serverEnv } from '@/env';
+import { env } from '@/env';
 
 const transport = pino.transport({
   targets: [
@@ -9,11 +9,11 @@ const transport = pino.transport({
         colorize: true,
       },
     },
-    ...(serverEnv.NODE_ENV === 'production'
+    ...(env.NODE_ENV === 'production' && env.LOGSTREAM_SOURCE_TOKEN
       ? [
           {
             target: '@logtail/pino',
-            options: { sourceToken: serverEnv.LOGSTREAM_SOURCE_TOKEN },
+            options: { sourceToken: env.LOGSTREAM_SOURCE_TOKEN },
             level: 'warn',
           },
         ]
