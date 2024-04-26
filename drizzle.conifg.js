@@ -1,5 +1,5 @@
 /** @type { import("drizzle-kit").Config } */
-export default {
+const config = {
   schema: './src/models/*.model.ts',
   out: './migrations',
   driver: 'pg',
@@ -7,3 +7,5 @@ export default {
     connectionString: process.env.DB_URL,
   },
 };
+
+export default config;
